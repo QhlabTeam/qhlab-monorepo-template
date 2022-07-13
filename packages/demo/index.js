@@ -1,4 +1,4 @@
-const demo = 'demo package changed';
+const demo = 'demo package changed changed';
 
 module.exports = {
   demo
