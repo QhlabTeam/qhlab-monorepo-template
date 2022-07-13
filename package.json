@@ -9,12 +9,18 @@
     "packages/*"
   ],
   "scripts": {
+    "prepare": "husky install",
     "dev": "turbo run dev --parallel",
-    "build": "turbo run build"
+    "build": "turbo run build",
+    "lint": "turbo run lint"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "@qhlab/eslint-plugin": "^1.10.0",
     "eslint": "^8.19.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "turbo": "^1.3.1"
   }
 }
