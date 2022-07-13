@@ -5,8 +5,8 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "packages/*",
-    "apps/*"
+    "app",
+    "packages/*"
   ],
   "scripts": {
     "dev": "turbo run dev",
