@@ -1,0 +1,75 @@
+{
+  "name": "cra-template-qhlab",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prepare": "husky install",
+    "postinstall": "yarn --cwd electron install",
+    "---Web": "",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "lint": "eslint \"src/**/*.{js,jsx}\"",
+    "---Web-mock": "",
+    "start-mock": "REACT_APP_MSW_ENABLED=true craco start",
+    "build-mock": "REACT_APP_MSW_ENABLED=true craco build",
+    "---Electron": "",
+    "start-electron": "yarn --cwd electron start",
+    "build-renderer": "cross-env PUBLIC_URL=./ BUILD_PATH=./electron/build/renderer yarn build",
+    "build-electron": "yarn --cwd electron build",
+    "---All": "",
+    "start-all": "run-p start start-electron",
+    "build-all": "run-s build-renderer build-electron"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "click-to-react-component": "^1.0.8",
+    "history": "^5.2.0",
+    "jotai": "^1.4.9",
+    "polished": "^4.1.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "5.0.0",
+    "react-use": "^17.3.1",
+    "web-vitals": "^2.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.0.1",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@craco/craco": "^6.4.3",
+    "@emotion/babel-preset-css-prop": "^11.2.0",
+    "@qhlab/eslint-plugin": "^1.10.0",
+    "@types/react": "^18.0.5",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.4",
+    "msw": "^0.36.3",
+    "npm-run-all": "^4.1.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "msw": {
+    "workerDirectory": "public"
+  }
+}
