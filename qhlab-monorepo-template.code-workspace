@@ -1,5 +1,8 @@
 {
-  "folders": [{"name": "root", "path": "."}],
+  "folders": [
+    {"name": "root", "path": "."},
+    {"name": "app", "path": "./app"}
+  ],
   "settings": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "[javascript]": {

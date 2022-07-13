@@ -6,6 +6,7 @@
     "prepare": "husky install",
     "postinstall": "yarn --cwd electron install",
     "---Web": "",
+    "dev": "craco start",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
