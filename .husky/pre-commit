@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npx lint-staged
+lerna exec --stream --since HEAD --exclude-dependents -- npx lint-staged
