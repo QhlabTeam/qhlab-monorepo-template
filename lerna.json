@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json.schemastore.org/lerna.json",
+  "packages": ["app", "packages/*"],
+  "useNx": true,
+  "version": "0.1.0",
+  "useWorkspaces": true,
+  "npmClient": "yarn",
+  "command": {
+    "version": {
+      "conventionalCommits": true,
+      "message": "💥 Release %s [skip ci]"
+    }
+  },
+  "changelogPreset": {
+    "name": "conventionalcommits",
+    "issueUrlFormat": "{{host}}/{{owner}}/{{repository}}/issues/{{id}}",
+    "types": [
+      {
+        "type": "feat",
+        "section": "✨ Features"
+      },
+      {
+        "type": "fix",
+        "section": "🐛 Bug Fixes"
+      },
+      {
+        "type": "chore",
+        "hidden": false,
+        "section": "🔫 Chores"
+      },
+      {
+        "type": "docs",
+        "hidden": false,
+        "section": "📝 Docs"
+      },
+      {
+        "type": "style",
+        "hidden": false,
+        "section": "💄 Styles"
+      },
+      {
+        "type": "refactor",
+        "hidden": false,
+        "section": "💡 Refactor"
+      },
+      {
+        "type": "perf",
+        "hidden": false,
+        "section": "⚡️ Performance"
+      },
+      {
+        "type": "test",
+        "hidden": false,
+        "section": "🧪 Tests"
+      },
+      {
+        "type": "ci",
+        "hidden": false,
+        "section": "🗳️ CICD"
+      },
+      {
+        "type": "BREAKING CHANGE",
+        "hidden": false,
+        "section": "🚨 Breaking Changes"
+      }
+    ],
+    "issuePrefixes": ["#"],
+    "commitUrlFormat": "{{host}}/{{owner}}/{{repository}}/commit/{{hash}}",
+    "compareUrlFormat": "{{host}}/{{owner}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}",
+    "userUrlFormat": "{{host}}/{{user}}"
+  }
+}
