@@ -1,3 +1,6 @@
 {
-  "extends": ["plugin:@qhlab/base"]
+  "extends": ["plugin:@qhlab/base"],
+  "parserOptions": {
+    "sourceType": "module"
+  }
 }

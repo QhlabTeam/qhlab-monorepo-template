@@ -10,19 +10,29 @@
   ],
   "scripts": {
     "prepare": "husky install",
-    "dev": "lerna run dev",
-    "build": "lerna run build",
+    "postinstall": "preconstruct dev",
+    "dev": "preconstruct dev && lerna run dev --scope=app",
+    "build": "preconstruct build && lerna run build --scope=app",
     "lint": "lerna run lint -- --fix",
     "new-version": "lerna version"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
+    "@preconstruct/cli": "^2.2.0",
     "@qhlab/eslint-plugin": "^1.10.0",
     "conventional-changelog-conventionalcommits": "^5.0.0",
     "eslint": "^8.19.0",
     "husky": "^8.0.1",
     "lerna": "^5.1.8",
-    "nx": "^14.4.2"
+    "nx": "^14.4.2",
+    "typescript": "^4.7.4"
+  },
+  "preconstruct": {
+    "packages": [
+      "packages/*"
+    ]
   }
 }

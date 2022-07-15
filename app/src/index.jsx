@@ -1,4 +1,5 @@
 import {ClickToComponent} from 'click-to-react-component';
+import {demo} from 'demo';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {unstable_HistoryRouter as HistoryRouter} from 'react-router-dom';
@@ -7,6 +8,8 @@ import App from './App';
 import {env} from './constants/env';
 import {history} from './helpers/history';
 import reportWebVitals from './reportWebVitals';
+
+console.log(demo);
 
 if (env.MSW_ENABLED) {
   const {worker} = require('./mocks/browser');
