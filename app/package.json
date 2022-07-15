@@ -24,7 +24,7 @@
     "build-all": "run-s build-renderer build-electron"
   },
   "dependencies": {
-    "demo": "1.0.0",
+    "demo": "0.1.0",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@testing-library/jest-dom": "^5.14.1",
